@@ -15,7 +15,7 @@ app.layout = html.Div([
     dcc.Input(id='my-id', value='initial value', type='text'),
     html.Div(id='my-div')
 ])
-#Cakk backs
+#Call backs
 @app.callback(
     Output(component_id='my-div', component_property='children'),
     [Input(component_id='my-id', component_property='value')]
