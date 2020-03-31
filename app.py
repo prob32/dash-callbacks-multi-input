@@ -1,12 +1,15 @@
 import dash
 import dash_html_components as html
 import dash_core_components as dcc
+##
 
-server = app.server
-
+tabtitle = 'COVID-19 Income tax calculator'
+###
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server = app.server
+app.title=tabtitle
+
 app.layout = html.Div([
     dcc.Dropdown(
         id='demo-dropdown',
@@ -29,4 +32,4 @@ def update_output(value):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server()
